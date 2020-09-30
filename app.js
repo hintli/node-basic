@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
+const {getPost} = require('./routes/post');
 
-app.get('/' , (req,res) => {
-    res.send("Hello my friend");
-})
 
-app.listen(3005);
+app.get('/',getPost);
+
+app.listen(3006);
